@@ -1,13 +1,11 @@
-//Author: Small Hedge Games
-//Updated: 13/06/2024
-
 using UnityEngine;
 
 namespace SmallHedge.SoundManager
 {
-    [CreateAssetMenu(menuName = "Small Hedge/Sounds SO", fileName = "Sounds SO")]
+    [CreateAssetMenu(fileName = "NewSoundsCollection", menuName = "SmallHedge/Sounds Collection")]
     public class SoundsSO : ScriptableObject
     {
-        public SoundList[] sounds;
+        // 現在它與 SoundList 在同一個命名空間，絕對能找到
+        public SoundList[] sounds; 
     }
 }
