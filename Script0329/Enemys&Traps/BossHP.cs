@@ -7,6 +7,7 @@ public class BossHP : MonoBehaviour
 {
     public int health = 50;
     public Slider healthBar;
+    public GameObject healthBarUI;
     public bool isInvulnerable = false;
 
     [Header("動畫")]
@@ -50,5 +51,10 @@ public class BossHP : MonoBehaviour
 
         // 關閉這個腳本，避免重複執行
         this.enabled = false;
+
+        if (healthBarUI != null)
+        {
+            healthBarUI.SetActive(false); // 直接隱藏整個血條物件
+        }
     }
 }
